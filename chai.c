@@ -1,6 +1,3 @@
-//MARCO A. SANTOLIN -- 198769
-//GIULIANO CHIOCHETTA LAGNI -- 199805
-
 #include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
@@ -112,7 +109,7 @@ void time_sleep(int min, int max){
 void *distribuidor_t(void *){
     printf("D Thread para controlar o distribuidor dos ingredientes criada.\n");
 
-    for(int i=0;i<N;i++){
+    for(int i=0;i<N;i++){ //o decrescimo de nota do professor acredito que esteja aqui, olhar...
         time_sleep(INGMIN, INGMAX);
 
         sem_wait(&sem_lock);
